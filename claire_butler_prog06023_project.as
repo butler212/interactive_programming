@@ -3,8 +3,8 @@
 //to stop my character going from f1 to f2 continuously//
 myCharacter.stop();
 
-stage.addEventListener(KeyboardEvent.KEY_DOWN,keyDownHandler);
-function keyDownHandler(Event:KeyboardEvent):void
+stage.addEventListener (KeyboardEvent.KEY_DOWN, keyDownHandler)
+function keyDownHandler (Event:KeyboardEvent): void
 {
 	if (myCharacter.x >= 256 && Event.keyCode == Keyboard.LEFT)
 	{
@@ -37,7 +37,11 @@ function keyDownHandler(Event:KeyboardEvent):void
 	}
 }
 
-
+stage.addEventListener (KeyboardEvent.KEY_UP, keyUpHandler)
+function keyUpHandler (Event:KeyboardEvent): void
+{
+	myCharacter.gotoAndStop(1);
+}
 
 
 
